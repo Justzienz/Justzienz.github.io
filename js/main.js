@@ -1,7 +1,12 @@
 /* ===================================================================
- * Luther 1.0.0 - Main JS
+ * Zienz 1.0.0 - Main JS
  *
  * ------------------------------------------------------------------- */
+
+const userLang = navigator.language || navigator.userLanguage;
+if (userLang.startsWith('tr') && window.location.pathname !== "/tr/") {
+    window.location.href = window.location.origin + '/tr/';
+}
 
 (function(html) {
 
